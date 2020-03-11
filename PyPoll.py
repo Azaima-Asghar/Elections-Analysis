@@ -6,38 +6,21 @@
 # 4 The total number of votes each canadidate recevied 
 # 5 The winner of the elections based on the most number of votes (popular vote)
 
-# import csv module to read and manipulate data from the election_results.csv
+# import csv and os modules to read and manipulate data from the election_results.csv
 import csv
 
-# import radom module 
+import os
 
-import random
+# Assign a variable to load a file from a path.
+file_to_load = ('Elections-Analysis/Resources/election_results.csv')
 
-# import numpy module
+# Assign a variable to save the file to a path.
+file_to_save = ('Elections-Analysis/Analysis/Election_Analysis.txt')
 
-# Assign a varialbe to the path of election_results.csv file to load 
-
-# direct way to get the file path 
-
-file_to_load = 'Elections-Analysis/Resources/election_results.csv'
-
-# indirect way to get the file path 
-
-# import os
-# file_to_load = os.path.join("Resources", "election_results.csv")
-
-# open the election data file and read it 
-
+# Open the election results and read the file.
 with open(file_to_load) as election_data:
-    print (election_data)
+    file_reader = csv.reader(election_data)
 
-# create a file name variable to the path of the file 
-
-file_to_save = "Elections-Analysis/Analysis/Election_analysis.txt"
-
-open(file_to_save,'w')
-
-# perform analysis on the election data 
-
-
-
+    # Read and print the heeader row of election_results.csv
+    headers = next(file_reader)
+    print (headers)
