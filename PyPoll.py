@@ -1,9 +1,5 @@
 # The data we need to retrieve for the elections analysis 
 
-
-# 4 The percentage of votes casted to each candidate 
-# 5 The winner of the elections based on the most number of votes (popular vote)
-
 # import csv and os modules to read and manipulate data from the election_results.csv
 import csv
 
@@ -24,6 +20,15 @@ Candidate_list = []
 
 # Initialize a empty dictionary for candidates and the respective votes they received in total.
 Candidate_votes = {}
+
+# Initialize a variable to hold an empty string value for the winning candidate.
+winnng_candidate = " "
+
+# Initialize a variable for the winning count.
+winning_count = 0
+
+# Initialize a variable for the winning percentage.
+winning_percentage = 0
 
 # Open the election results and read the file.
 with open(file_to_load) as election_data:
@@ -47,13 +52,38 @@ with open(file_to_load) as election_data:
         # this needs to be outside the if statement so that we can get the count of every vote for each candidate.
         Candidate_votes[candidate_name] += 1
 
+# 4 The percentage of votes casted to each candidate 
+
 # iterate through the candidates list to get each candidate name.
 # iterate through the candidate dictonary to get the total number of votes for each candidate.
+
 for candidate in Candidate_votes:
     votes = Candidate_votes[candidate]
     # the percentage of total votes for each candidate.
-    vote_percentage = int(votes) / int(total_vote_count) * 100
-    print (f"{candidate} : recieved {vote_percentage} % of the vote.")
+    vote_percentage = float(votes) / float(total_vote_count) * 100
+
+    # 5 The winner of the elections based on the most number of votes (popular vote)
+
+    # calculate if the vote count is greater than the winning count and if vote percentage is greater than the winning percentage.
+    if (total_vote_count > winning_count) and (vote_percentage > winning_percentage):
+        # if conditions true than make the winning count to be the votes.
+        winning_count = votes
+        # make winning percentage equal to vote percentage
+        winning_percentage = vote_percentage
+        # set the winning candidate to be the candidate's name 
+        winnng_candidate = candidate
+
+    # print the winning canadidate, vote count and percentage
+    print (f" {candidate}: {winning_percentage: .1f}% ({votes:,})\n")
+
+# printing candidate summary of votes.
+winning_candidate_summary = (
+f"---------------------------\n"
+f"Winner: {winnng_candidate}\n"
+f"Winning Vote Count: {winning_count}\n"
+f"Winning Percentage: {winning_percentage:.1f}%\n")
+
+print(winning_candidate_summary)
 
 # print the total number of votes.
 print (total_vote_count)
