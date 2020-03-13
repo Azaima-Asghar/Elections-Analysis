@@ -1,6 +1,6 @@
 # Elections-Analysis
 
-## Project Overview 
+## *Project Overview*
 
 Tom the employee of the Colorado Board of elections who needs help in election audit to tabulate results for a US congressional precinct in colorado. The task is to report the total number of votes cast, the total number of votes for each candidate, the percentage of votes for each candidate and the winner of the election based on the popular vote.
 
@@ -8,13 +8,13 @@ Python is used to automate this task.The code will be further used to audit not 
 
 There are three primary voting methods that will be taken into account for this task. Mail-in ballot, punch cards and direct recording elections. All together the votes cast using these three methods will determine the final election results. After the votes are counted, the task is to generate a vote count report to certify the US Congressional race.
 
-## Resources
+## *Resources*
 
 
 * Data Source: election_results.csv (present in the resources folder)
 * Software: Python - version: 3.7.4, Visual Studio Code - version: 1.42.1
 
-## Summary 
+## *Summary*
 
 The analysis of the election data produced the following results:
 
