@@ -16,7 +16,7 @@ There are three primary voting methods that will be taken into account for this 
 
 ## Summary 
 
-The analysis on the election data produced the following results:
+The analysis of the election data produced the following results:
 
 1) There were  369,711  votes cast in the election. 
 2) The candidates in the election were:<br/>
