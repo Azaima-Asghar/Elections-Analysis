@@ -32,3 +32,18 @@ The analysis of the election data produced the following results:
 4) The winner of the election was:
  
     * Candidate Diana DeGette, who received 73.8 % of the vote and 272,892 number of votes.
+
+## *Challenge Overview*
+
+After sharing the election audit with the election commission, the election commission has asked to confirm the voter turnout for each county that voted in this congressional district. 
+
+## *Challenge Summary*
+
+The analysis of the election data produced the following results for the counties:
+ 
+1) There were three counties where the votes came for the election:<br/><br>
+    * Jefferson voted 10.5% in the election with 38,855 number of votes.
+    * Denver voted 82.8% n the election with 306,055 number of votes.
+    * Arapahoe voted 6.7% in the election with 24,801 number of votes.
+
+2) The largest county turnout was Denver.
