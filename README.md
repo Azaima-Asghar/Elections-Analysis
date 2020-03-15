@@ -41,7 +41,7 @@ After sharing the election audit with the election commission, the election comm
 
 The analysis of the election data produced the following results for the counties:
  
-1) There were three counties where the votes came for the election:<br/><br>
+1) There were three counties where the votes came for the election:<br/>
     * Jefferson voted 10.5% in the election with 38,855 number of votes.
     * Denver voted 82.8% n the election with 306,055 number of votes.
     * Arapahoe voted 6.7% in the election with 24,801 number of votes.
